@@ -1,0 +1,208 @@
+@import url('style.css');
+/* Ensure base styles are loaded if not already */
+
+body {
+    background-color: #0a000a;
+    background-image:
+        radial-gradient(circle at 50% 0%, rgba(80, 0, 60, 0.25) 0%, transparent 60%),
+        radial-gradient(circle at 10% 20%, rgba(160, 0, 120, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(100, 0, 80, 0.15) 0%, transparent 50%);
+    background-attachment: fixed;
+    /* Keep background stable while scrolling */
+}
+
+/* Maintain navbar background to avoid gradient bleed if requested */
+nav.navbar {
+    background-color: #0a000a;
+    /* Override transparent */
+}
+
+/* Ensure navbar active state links to pink */
+.nav-link.active {
+    color: var(--primary-pink) !important;
+}
+
+.wiki-section {
+    padding: 80px 0;
+    /* min-height: 80vh; removed large min-height to fit content better */
+    background: transparent;
+    /* Removed repeated gradient */
+}
+
+.wiki-title {
+    font-size: clamp(1.6rem, 4vw, 3rem);
+    font-weight: 900;
+    margin-bottom: 60px;
+    background: linear-gradient(to right, #d633ff, #ff0055);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: #d633ff;
+}
+
+
+.wiki-title .text-pink {
+    color: #ff0055;
+}
+
+.wiki-card {
+    background: linear-gradient(135deg, rgba(30, 20, 30, 0.95), rgba(20, 10, 20, 0.98));
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 40px;
+    padding: 60px 40px;
+    height: 100%;
+    transition: transform 0.3s ease;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.wiki-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(214, 51, 255, 0.3);
+}
+
+.wiki-icon-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* Simulate the colorful icon look with text gradient on the icon */
+}
+
+.wiki-icon {
+    font-size: 5rem;
+    background: linear-gradient(135deg, #d633ff 0%, #ff0055 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 20px rgba(214, 51, 255, 0.4));
+}
+
+/* Specific styling to mock the outlines in the image if possible without SVG */
+/* The image has filled icons with thick outlines. FontAwesome solid is filled. */
+/* We can add a stroke effect using text-stroke if supported, or just rely on the gradient fill which looks premium. */
+
+.wiki-card-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+}
+
+.wiki-card-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+@media (max-width: 991px) {
+    .wiki-title {
+        font-size: 2.2rem;
+    }
+
+    .wiki-card {
+        padding: 40px 30px;
+    }
+}
+
+/* What DOWN is All About Section */
+.feature-card-colored {
+    border-radius: 20px;
+    padding: 30px;
+    height: 100%;
+    color: white;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 320px;
+    /* Ensure uniform height visually */
+}
+
+.feature-card-colored:hover {
+    transform: translateY(-5px);
+}
+
+.card-private {
+    background: #ff0055;
+    /* Bright pink */
+}
+
+.card-authentic {
+    background: #ff0055;
+    /* Same pink */
+}
+
+.card-transparent {
+    background: linear-gradient(135deg, #ff0055 0%, #d633ff 100%);
+    /* Pink to Purple */
+}
+
+.card-global {
+    background: #a333ff;
+    /* Solid Purple */
+}
+
+.colored-icon-box {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.colored-card-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.colored-card-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 500;
+}
+
+/* Press Section Lines */
+.press-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.line-left,
+.line-right {
+    height: 2px;
+    width: 60px;
+    background: #ff0055;
+    display: inline-block;
+}
+
+.press-logo {
+    max-height: 35px;
+    max-width: 100%;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+.press-logo:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.press-logo-container {
+    background: linear-gradient(135deg, rgba(35, 15, 30, 0.7) 0%, rgba(30, 10, 35, 0.7) 100%);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 40px;
+    padding: 60px 40px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Override Contact Section background within Wiki Page to blend in */
+.contact-section {
+    background: transparent !important;
+    min-height: auto;
+    padding-bottom: 150px;
+    /* Add space at bottom */
+}

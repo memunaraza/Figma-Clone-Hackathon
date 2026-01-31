@@ -1,0 +1,1114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --bg-dark: #0a000a;
+    --primary-pink: #ff0055;
+    --text-white: #ffffff;
+    --text-muted: #b3b3b3;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Make all images responsive by default */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    -webkit-user-drag: none;
+}
+
+/* Navbar */
+.navbar {
+    padding: 20px 0;
+}
+
+.navbar-brand img {
+    height: 30px;
+    /* Adjust based on Login.png actual size */
+}
+
+.nav-link {
+    color: var(--text-white) !important;
+    font-weight: 500;
+    margin-left: 20px;
+    font-size: 0.95rem;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    padding: 60px 0;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Background Glow */
+.glow-spot {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 0, 85, 0.4) 0%, rgba(10, 0, 10, 0) 70%);
+    filter: blur(80px);
+    z-index: -1;
+    top: 20%;
+    left: -10%;
+}
+
+.hero-content {
+    padding-left: 20px;
+}
+
+h1.hero-title {
+    font-size: clamp(1.8rem, 6vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.05;
+    margin-bottom: 20px;
+}
+
+.text-pink {
+      font-size: clamp(1.6rem, 4vw, 3rem);
+    font-weight: 900;
+    margin-bottom: 60px;
+    background: linear-gradient(to right, #d633ff, #ff0055);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: #d633ff;
+}
+
+.hero-desc {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 480px;
+    margin-bottom: 30px;
+}
+
+/* Store Buttons */
+.store-btn {
+    border: 1px solid var(--glass-border);
+    background: transparent;
+    border-radius: 12px;
+    padding: 8px 20px;
+    display: inline-flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    transition: 0.3s;
+    min-width: 160px;
+}
+
+.store-btn:hover {
+    background: var(--glass-bg);
+    border-color: white;
+}
+
+.store-btn-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.store-btn-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.2;
+}
+
+.small-text {
+    font-size: 10px;
+    opacity: 0.8;
+}
+
+.big-text {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Phone Mockup */
+.phone-mockup {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    max-height: clamp(280px, 45vh, 600px);
+    width: auto;
+}
+
+/* Stats Section */
+.stats-section {
+    position: relative;
+    margin-top: -50px;
+    /* Overlap slightly if needed or just spacing */
+    padding-bottom: 100px;
+}
+
+.stats-card {
+    background: #1a101a;
+    border: 1px solid var(--glass-border);
+    border-radius: 40px;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.stat-num {
+    color: var(--primary-pink);
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .stats-card {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .phone-mockup {
+        margin-bottom: 40px;
+        transform: none;
+    }
+}
+
+/* About Section */
+.about-section {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.about-title {
+    font-size: clamp(1.6rem, 4vw, 3rem);
+    font-weight: 900;
+    margin-bottom: 60px;
+    background: linear-gradient(to right, #d633ff, #ff0055);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: #d633ff;
+}
+
+.feature-container {
+    background: #140d14;
+    border: 1px solid var(--glass-border);
+    border-radius: 40px;
+    padding: 60px 40px;
+}
+
+.feature-item {
+    text-align: left;
+    padding: 20px;
+    height: 100%;
+}
+
+.feature-icon-box {
+    width: 60px;
+    height: 60px;
+    background: #1e151e;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+/* Icon Specific Colors */
+.icon-private {
+    color: #ffd700;
+}
+
+.icon-authentic {
+    color: #d633ff;
+}
+
+.icon-transparent {
+    color: #ff3366;
+}
+
+.icon-global {
+    color: #00ff66;
+}
+
+.feature-item h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.feature-item p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Dividers between columns on desktop */
+@media (min-width: 992px) {
+    .feature-col {
+        border-right: 1px solid var(--glass-border);
+    }
+
+    .feature-col:last-child {
+        border-right: none;
+    }
+}
+
+/* Why Section */
+.why-section {
+    padding: 100px 0;
+}
+
+.why-title {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #d633ff;
+    /* Purple start */
+    background: linear-gradient(to right, #d633ff, #ff0055);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 50px;
+}
+
+.why-heading {
+    position: relative;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+.cursor-icon {
+    position: absolute;
+    bottom: -15px;
+    right: -20px;
+    width: 25px;
+    height: auto;
+}
+
+.why-desc {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.why-image-wrapper {
+    background: #140d14;
+    border-radius: 40px;
+    border: 1px solid var(--glass-border);
+    text-align: center;
+    overflow: hidden;
+    /* margin: 10px; */
+}
+
+/* Chat Section */
+.chat-section {
+    padding: 100px 0;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--text-white);
+    line-height: 1.2;
+}
+
+.section-desc {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.chat-image-wrapper {
+    background: #140d14;
+    border-radius: 40px;
+    /* padding: 40px; */
+    /* border: 1px solid var(--glass-border); */
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    /* Adding min-height or specific styling to match the card look if needed */
+}
+
+/* Ensure images fit well */
+.chat-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Incredible Chat Section */
+.incredible-chat-section {
+    padding: 100px 0;
+}
+
+.tags-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.chat-tag {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 8px 20px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.chat-tag:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-white);
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 100px 0;
+}
+
+.testimonial-main-title {
+    width: 345px;
+    font-size: clamp(1.6rem, 4.5vw, 3rem);
+    font-weight: 900;
+    line-height: 1.2;
+    color: #ff0055;
+    /* Pink color matching design */
+}
+
+.text-gradient {
+    background: linear-gradient(to right, #d633ff, #ff0055);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: #ff0055;
+}
+
+.testimonial-card {
+    /* Darker reddish/purple background */
+    background: linear-gradient(135deg, rgba(40, 10, 20, 0.95) 0%, rgba(40, 10, 30, 0.9) 100%);
+    border-radius: 30px;
+    padding: 40px;
+    border: 1px solid rgba(255, 0, 85, 0.2);
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.quote-icon {
+    font-size: 3rem;
+    color: #d633ff;
+    /* Purple quote */
+    margin-bottom: 20px;
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.testimonial-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 20px;
+}
+
+.user-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text-white);
+}
+
+.user-role {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.stars {
+    display: flex;
+    gap: 5px;
+    color: #ffcc00;
+    /* Star color */
+}
+
+/* Specific background blur effect related to the image */
+.testimonial-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 30px;
+    background: radial-gradient(circle at top right, rgba(255, 0, 85, 0.15), transparent 50%);
+    pointer-events: none;
+}
+
+/* Split card: two equal halves (top & bottom) for the middle testimonial */
+.split-card {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    /* halves will handle their own padding */
+    overflow: hidden;
+    height: 260px;
+    /* gives two 50% halves; adjust if you'd like a different size */
+    border-radius: 30px;
+    /* keep card rounding consistent */
+}
+
+.split-card .split-half {
+    padding: 24px 28px;
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.split-card .split-top {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.split-card .split-bottom {
+    /* remove redundant top border from .testimonial-footer when used inside split card */
+}
+
+.split-card .testimonial-footer {
+    border-top: none;
+    padding-top: 0;
+}
+
+@media (max-width: 991px) {
+    .split-card {
+        height: auto;
+        /* allow natural flow on smaller screens */
+    }
+
+    .split-card .split-half {
+        padding: 20px;
+    }
+}
+
+/* Testimonials List Wrapper */
+.testimonials-wrapper {
+    height: 650px;
+    /* Fixed height required for cut-off effect */
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.testimonials-stack {
+    transform: translateY(-170px);
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    /* spacing between stacked cards */
+}
+
+/* Background Glow for Testimonials */
+.testimonials-section {
+    position: relative;
+    overflow: hidden;
+    /* Adding a subtle purple tint to the whole section area if needed */
+    /* background: radial-gradient(circle at left, rgba(160, 32, 240, 0.1) 0%, transparent 40%); */
+}
+
+.background-glow-right {
+    position: absolute;
+    width: 900px;
+    height: 900px;
+    /* Stronger purple/pink glow */
+    background: radial-gradient(circle, rgba(180, 0, 180, 0.5) 0%, rgba(10, 0, 10, 0) 70%);
+    filter: blur(120px);
+    top: -10%;
+    right: -20%;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 100px 0;
+    position: relative;
+}
+
+.cta-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #d633ff;
+    /* Purple start */
+    line-height: 1.3;
+}
+
+.cta-title .text-pink {
+    color: #ff0055;
+}
+
+/* Filled Store Buttons for CTA */
+.store-btn-filled {
+    background: black;
+    /* Filled background as per image */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 25px;
+    min-width: 200px;
+    border-radius: 12px;
+}
+
+.store-btn-filled:hover {
+    background: #1a1a1a;
+    border-color: white;
+}
+
+@media (max-width: 768px) {
+    .cta-title {
+        font-size: 2rem;
+    }
+}
+
+/* Press Section */
+.press-section {
+    padding: 80px 0;
+}
+
+.press-title {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #d633ff;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.press-logo{
+     max-height: 35px;
+    max-width: 100%;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+/* Title Lines */
+.line-left,
+.line-right {
+    height: 2px;
+    width: 60px;
+    background: linear-gradient(to right, transparent, #ff0055);
+    display: inline-block;
+}
+
+.line-right {
+    background: linear-gradient(to left, transparent, #ff0055);
+}
+
+.press-logo-container {
+    background: linear-gradient(135deg, rgba(35, 15, 30, 0.7) 0%, rgba(30, 10, 35, 0.7) 100%);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 40px;
+    padding: 60px 40px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-collapse {
+    background: #0a000a;
+    /* Dark background for mobile menu */
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+@media (min-width: 992px) {
+    .navbar-collapse {
+        background: transparent;
+        padding: 0;
+        margin-top: 0;
+    }
+}
+
+.press-logo {
+    max-height: 25px;
+    /* Adjust scale based on image type */
+    max-width: 100%;
+    filter: brightness(0) invert(1);
+    /* Make white if black logos, otherwise remove */
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+.press-logo:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.press-link-text {
+    font-size: 0.9rem;
+    color: var(--text-white);
+}
+
+.more-press-link {
+    color: var(--text-muted);
+    text-decoration: underline;
+}
+
+.more-press-link:hover {
+    color: #d633ff;
+}
+
+/* Footer Section */
+.footer-section {
+    background: linear-gradient(to bottom, #140d14, #0a000a);
+    padding: 80px 0 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.footer-brand {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.footer-desc {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.copyright-text {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.footer-link {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.footer-link:hover {
+    color: #ff0055;
+}
+
+.social-icons a {
+    color: var(--text-white);
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #d633ff;
+}
+
+.bottom-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.bottom-links a:hover {
+    color: var(--text-white);
+}
+
+/* Split-card visual refinements (override to match reference image) */
+.testimonial-card.split-card {
+    height: 340px;
+    /* taller for stronger split */
+    background: linear-gradient(135deg, rgba(40, 10, 20, 0.95) 0%, rgba(30, 10, 40, 0.92) 100%);
+    border: 1px solid rgba(255, 0, 85, 0.18);
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-card.split-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 30px;
+    background: linear-gradient(135deg, rgba(255, 0, 85, 0.06), rgba(214, 51, 255, 0.03) 40%, rgba(0, 0, 0, 0) 70%);
+    pointer-events: none;
+    mix-blend-mode: screen;
+}
+
+.testimonial-card.split-card .split-half {
+    padding: 28px 34px;
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.testimonial-card.split-card .split-top {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.testimonial-card.split-card .split-top .quote-icon {
+    font-size: 4rem;
+    margin-bottom: 12px;
+    color: #ff66b2;
+}
+
+.testimonial-card.split-card .split-top .testimonial-text {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin: 0;
+    max-width: 520px;
+}
+
+.testimonial-card.split-card .split-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+.testimonial-card.split-card .user-avatar-placeholder img {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 8px 30px rgba(214, 51, 255, 0.08);
+}
+
+.testimonial-card.split-card .user-info {
+    margin-left: 14px;
+}
+
+.testimonial-card.split-card .user-name {
+    font-size: 1.05rem;
+}
+
+.testimonial-card.split-card .stars {
+    gap: 6px;
+}
+
+.testimonial-card.split-card .testimonial-footer {
+    border-top: none;
+    padding-top: 0;
+}
+
+@media (max-width: 991px) {
+    .testimonial-card.split-card {
+        height: auto;
+        border-radius: 24px;
+    }
+
+    .testimonial-card.split-card .split-half {
+        padding: 20px;
+    }
+
+    .testimonial-card.split-card .split-top .quote-icon {
+        font-size: 3rem;
+    }
+
+    .testimonial-card.split-card .user-avatar-placeholder img {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+/* === Responsive Breakpoints: improve layout across devices === */
+@media (max-width: 1199px) {
+    .hero-title {
+        font-size: 3.8rem;
+    }
+
+    .about-title {
+        font-size: 2.8rem;
+    }
+
+    .why-title,
+    .section-title {
+        font-size: 2.4rem;
+    }
+
+    .stats-card {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 991px) {
+
+    /* Strong left-side gradient for mobile */
+    .glow-spot {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(160, 32, 240, 0.4) 0%, rgba(10, 0, 10, 0) 80%);
+        filter: blur(50px);
+        top: 0;
+        left: 0;
+        border-radius: 0;
+        opacity: 0.8;
+    }
+
+
+    .hero-title {
+        font-size: 3rem;
+        margin-top: 20px;
+    }
+
+    .hero-content .d-flex {
+        gap: 15px;
+        /* Explicit gap */
+    }
+
+    .hero-desc {
+        max-width: 100%;
+        margin: 0 auto 20px;
+        /* Center desc */
+    }
+
+    .hero-content {
+        text-align: center;
+        /* Center hero text */
+    }
+
+    .hero-content .d-flex {
+        justify-content: center;
+        /* Center hero buttons */
+    }
+
+    .phone-mockup {
+        max-height: 480px;
+      margin:auto;
+    }
+
+    .stats-card {
+        padding: 30px;
+        border-radius: 28px;
+    }
+
+    .feature-container {
+        padding: 40px 20px;
+        border-radius: 24px;
+    }
+
+    .feature-item {
+        padding: 16px;
+    }
+
+    /* Center Footer on Mobile */
+    .footer-section {
+        text-align: center;
+    }
+
+    .footer-brand {
+        margin: auto ;
+       
+    }
+
+    /* Override bootstrap justify-content-lg-end */
+    .footer-section .d-flex {
+        justify-content: center !important;
+    }
+
+    /* Testimonials become flow content (no translate) */
+    .testimonials-wrapper {
+        min-height: 0;
+        height: auto;
+        overflow: visible;
+    }
+
+    .testimonials-stack {
+        transform: none;
+    }
+
+    .testimonial-card {
+        padding: 28px;
+        border-radius: 24px;
+    }
+
+    .testimonial-main-title {
+        font-size: 2.5rem;
+    }
+
+    .testimonial-text {
+        font-size: 0.98rem;
+    }
+
+    /* Split card stacks naturally on mobile */
+    .split-card {
+        height: auto;
+    }
+
+    .split-card .split-half {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .why-title,
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .about-title {
+        font-size: 2rem;
+    }
+
+    .phone-mockup {
+        max-height: 380px;
+    }
+
+    .press-logo-container {
+        padding: 30px;
+        /* Reduce padding */
+    }
+
+    .testimonials-stack {
+        gap: 20px;
+    }
+
+    .testimonial-card {
+        padding: 20px;
+    }
+
+    .testimonial-text {
+        font-size: 0.95rem;
+    }
+
+    .user-name {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        padding: 12px 0;
+    }
+
+    .store-btn{
+        width: auto;
+        height: auto;
+    }
+
+    .hero-section {
+        padding: 28px 0;
+    }
+
+    h1.hero-title {
+        font-size: 1.8rem;
+    }
+
+    .about-title,
+    .why-title,
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .stats-card {
+        flex-direction: column;
+        padding: 20px;
+        gap: 16px;
+    }
+
+    .feature-item {
+        padding: 12px;
+    }
+
+    .testimonials-wrapper {
+        padding: 10px 0;
+    }
+
+    .testimonial-card {
+        padding: 14px;
+        border-radius: 18px;
+    }
+
+    .quote-icon {
+        font-size: 2rem;
+    }
+
+    .split-card .split-half {
+        padding: 14px;
+    }
+
+    .split-card .split-top {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    /* Make sure the right-side content stacks under left on very small screens */
+    .row.align-items-center>.col-lg-5,
+    .row.align-items-center>.col-lg-6,
+    .row.align-items-center>.col-lg-7 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .press-logo {
+        max-height: 20px;
+        /* Smaller logos */
+    }
+
+    .cta-title {
+        font-size: 1.8rem;
+    }
+    .why-image-wrapper{
+        margin: 10px;
+    }
+
+    .why-content{
+        margin: 12px;
+    }
+    .why-heading{
+        font-size: 26px;
+    }
+
+    .chat-image-wrapper{
+        margin: 10px;
+    }
+   .disccontent{
+        margin: 12px;
+   }
+   .tagscontent{
+        margin: 12px;
+}
+.buttondownapp{
+    margin: 12px;
+}
+.downbtn{
+    margin: 12px;
+    min-width: 100px;
+}
+}
